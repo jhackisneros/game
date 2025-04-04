@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Catálogo</h2>
+<ul>
+    <li><a href="{{ url_for('videojuegos') }}">Videojuegos</a></li>
+    <li><a href="{{ url_for('moviles') }}">Móviles</a></li>
+    <li><a href="{{ url_for('consolas') }}">Consolas</a></li>
+    <li><a href="{{ url_for('ordenadores') }}">Ordenadores</a></li>
+</ul>
+{% endblock %}

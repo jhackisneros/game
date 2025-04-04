@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Ordenadores</h2>
+<h3>Gráfica NVIDIA</h3>
+<ul>
+    {% for ordenador in nvidia %}
+    <li>{{ ordenador.modelo }} - ${{ ordenador.precio }}</li>
+    {% endfor %}
+</ul>
+<h3>Gráfica AMD</h3>
+<ul>
+    {% for ordenador in amd %}
+    <li>{{ ordenador.modelo }} - ${{ ordenador.precio }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

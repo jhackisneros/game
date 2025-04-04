@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Móviles</h2>
+<h3>Android</h3>
+<ul>
+    {% for marca, modelos in android.items() %}
+    <li>{{ marca }}
+        <ul>
+            {% for modelo in modelos %}
+            <li>{{ modelo.modelo }} - ${{ modelo.precio }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+<h3>Apple</h3>
+<ul>
+    {% for modelo in apple %}
+    <li>{{ modelo.modelo }} - ${{ modelo.precio }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

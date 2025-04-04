@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Videojuegos</h2>
+<ul>
+    {% for key, categoria in categorias.items() %}
+    <li>{{ categoria.nombre }}
+        <ul>
+            {% for juego in categoria.juegos %}
+            <li>{{ juego.nombre }} - ${{ juego.precio }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
